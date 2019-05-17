@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+	background: #F9F7F7;
+	color: #3B3638;
+}
+
+.bookResults {
+	width: 100%;
+	border: 0;
+}
+
+.bookResults tr {
+	line-height: 25px;
+    border-bottom: 1px solid #C9A4A0;
+    border-top: 0;
+}
+
+.bookResults tr th {
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #E7BDB3;
+}
+
+.bookResults tr td {
+    border-bottom: 1px solid #C9A4A0;
+    border-left: 0;
+    border-right: 0;
+}
