@@ -10,34 +10,39 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-	<table class="bookResults">
-		<tr>
-			<th>Title</th>
-			<th>Published</th>
-			<th>Authors</th>
-			<th>Price</th>
-		</tr>
-		<%
-		    List<Book> booksList = (List<Book>) request.getAttribute("booksList");
-		%>
+	<div id="wrapper">
+		<div class="result-box">
+			<table class="bookResults">
+				<tr>
+					<th>Title</th>
+					<th>Published</th>
+					<th>Authors</th>
+                    <th>Publisher</th>
+					<th>Price</th>
+				</tr>
+				<%
+				    List<Book> booksList = (List<Book>) request.getAttribute("booksList");
+				%>
 
-		<c:forEach items="${booksList}" var="book">
-			<tr>
-				<td><c:out value="${book.title}" /> 
-				<c:if
-						test="!${book.subtitle}.isEmpty()">
+				<c:forEach items="${booksList}" var="book">
+					<tr>
+						<td><c:out value="${book.title}" /> <c:if
+								test="!${book.subtitle}.isEmpty()">
 				    -
 				    <c:out value="${book.subtitle}" />
-				</c:if>
-				</td>
+							</c:if></td>
 
-				<td><c:out value="${book.publishedDate}" /></td>
-				<td><c:out value="${book.authors}" /></td>
-				<td><c:out value="${book.formattedListPrice}" /></td>
-			</tr>
-		</c:forEach>
+						<td><c:out value="${book.publishedDate}" /></td>
+						<td><c:out value="${book.authors}" /></td>
+                        <td><c:out value="${book.publisher}" /></td>
+						<td><c:out value="${book.formattedListPrice}" /></td>
+					</tr>
+				</c:forEach>
 
 
-	</table>
+			</table>
+		</div>
+		<br /> <a href="index.jsp">Back to main page</a>
+	</div>
 </body>
 </html>

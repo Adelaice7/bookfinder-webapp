@@ -21,9 +21,12 @@ public class Book {
     private String formattedRetailPrice;
 
     private String description;
+    
+    private String publisher;
 
     public Book(String title, String authors, String publishedDate, String subtitle, String url, int listPrice,
-            String formattedListPrice, int retailPrice, String formattedRetailPrice, String description) {
+            String formattedListPrice, int retailPrice, String formattedRetailPrice, String description,
+            String publisher) {
         super();
         this.title = title;
         this.authors = authors;
@@ -35,6 +38,7 @@ public class Book {
         this.retailPrice = retailPrice;
         this.formattedRetailPrice = formattedRetailPrice;
         this.description = description;
+        this.publisher = publisher;
     }
 
     public String getTitle() {
@@ -116,5 +120,15 @@ public class Book {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    
 
 }

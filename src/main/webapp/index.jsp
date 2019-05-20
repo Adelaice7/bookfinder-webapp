@@ -8,6 +8,7 @@
 </head>
 <body>
 <a href="books">Get Books, Fixed Query</a><br/>
+<a href="searchBooks">Search for Books</a><br/>
 <p>Today's date: <%= (new java.util.Date()).toLocaleString()%></p>
 </body>
 </html> 

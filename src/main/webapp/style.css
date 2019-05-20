@@ -1,8 +1,13 @@
 @charset "UTF-8";
 
+html, body {
+	width: 100%;
+}
+
 body {
 	background: #F9F7F7;
 	color: #3B3638;
+	margin: 0 auto;
 }
 
 .bookResults {
@@ -12,8 +17,8 @@ body {
 
 .bookResults tr {
 	line-height: 25px;
-    border-bottom: 1px solid #C9A4A0;
-    border-top: 0;
+	border-bottom: 1px solid #C9A4A0;
+	border-top: 0;
 }
 
 .bookResults tr th {
@@ -24,7 +29,61 @@ body {
 }
 
 .bookResults tr td {
-    border-bottom: 1px solid #C9A4A0;
-    border-left: 0;
-    border-right: 0;
+	border-bottom: 1px solid #C9A4A0;
+	border-left: 0;
+	border-right: 0;
+}
+
+div#wrapper {
+	width: 100%;
+	text-align: center;
+}
+
+div.result-box {
+	display: inline-block;
+	width: 75%;
+    border: 1px dotted #d6cfcf;
+    margin: 25px;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+div.simple-formbox {
+	width: 500px;
+	border: 1px dotted #d6cfcf;
+	padding: 50px;
+	margin: 25px;
+	text-align: center;
+	border-radius: 15px;
+	display: inline-block;
+}
+
+div.simple-formbox input[type=text] {
+	background: #e5e0e0;
+	border: 2px solid #d6cfcf;
+	color: #686262;
+	border-radius: 2px;
+	margin-bottom: 25px;
+	padding: 10px;
+	width: 50%;
+}
+
+div.errorBox {
+	background: #823737;
+	border: 1px solid #591e1e;
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	padding: 25px;
+	margin: 15px;
+	display: inline-block;
+	letter-spacing: 1px;
+}
+
+.btn {
+	padding: 5px;
+	background: #e5e0e0;
+	border-radius: 5px;
+    border: 2px solid #d6cfcf;
+    color: #686262;
 }

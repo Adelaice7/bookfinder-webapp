@@ -1,20 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-  <display-name>bookfinderWebApp</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  <servlet>
-    <servlet-name>BookFinderMain</servlet-name>
-    <servlet-class>bookfinderWebApp.controller.MainController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>BookFinderMain</servlet-name>
-    <url-pattern>/books</url-pattern>
-  </servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+    id="WebApp_ID" version="3.1">
+    <display-name>bookfinderWebApp</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>BookFinderMain</servlet-name>
+        <servlet-class>bookfinderWebApp.controller.MainController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookFinderMain</servlet-name>
+        <url-pattern>/books</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>SearchBooks</servlet-name>
+        <servlet-class>bookfinderWebApp.controller.BooksearchController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchBooks</servlet-name>
+        <url-pattern>/searchBooks</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    <error-page>
+       <error-code>404</error-code>
+       <location>/error</location>
+    </error-page>
+    
+    <error-page>
+       <error-code>403</error-code>
+       <location>/error</location>
+    </error-page>
+    
+    <!-- exception-type related error pages -->
+    <error-page>
+       <exception-type>
+          javax.servlet.ServletException
+       </exception-type >
+       <location>/error</location>
+    </error-page>
+    
+    <error-page>
+       <exception-type>java.io.IOException</exception-type >
+       <location>/error</location>
+    </error-page>
 </web-app>
